@@ -1,0 +1,118 @@
+.welcome {
+    background-color: $section-bg;
+
+    // .welcome__container
+    &__container {
+        padding-top: 62px;
+        padding-bottom: 62px;
+
+        @media (max-width: $mobile) {
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+
+        @media (max-width: $small) {
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+    }
+
+    // .welcome__body
+    &__body {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @media (max-width: $mobile) {
+            flex-direction: row-reverse;
+        }
+    }
+
+    // .welcome__image
+    &__image {
+        flex: 1 1 37%;
+
+        @media (max-width: 450px) {
+            display: none;
+        }
+
+        img {
+            max-width: 100%;
+        }
+    }
+
+    // .welcome__content
+    &__content {
+        flex: 1 1 63%;
+        max-width: 550px;
+        padding-top: 36px;
+
+        @media (max-width: $small) {
+            padding-top: 0;
+        }
+    }
+
+    // .welcome__title
+    &__title {
+        font-weight: 700;
+        font-size: 4.5rem;
+        line-height: 1.1;
+        color: $whiteGray;
+
+        span {
+            color: $green;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 42px;
+        }
+
+        @media (max-width:$mobile) {
+            font-size: 3.5rem;
+
+            &:not(:last-child) {
+                margin-bottom: 30px;
+            }
+        }
+    }
+
+    // .welcome__text
+    &__text {
+        font-size: 2rem;
+        line-height: 1.75;
+        color: $darkGray;
+
+        &:not(:last-child) {
+            margin-bottom: 48px;
+        }
+
+        @media (max-width: $mobile) {
+            font-size: 1.6rem;
+
+            &:not(:last-child) {
+                margin-bottom: 30px;
+            }
+        }
+    }
+
+    // .welcome__button
+    &__button {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 158px;
+        height: 44px;
+        border: 2px solid $orange;
+        border-radius: 10px;
+        font-size: 1.6rem;
+        line-height: 1.25;
+        color: inherit;
+
+        @media (max-width: $small) {
+            width: 100px;
+            height: 34px;
+            font-size: 1rem;
+            flex-wrap: nowrap;
+        }
+    }
+}
