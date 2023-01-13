@@ -1,0 +1,45 @@
+.footer {
+
+    // .footer__container
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 40px;
+        padding-bottom: 40px;
+
+        @media (max-width: $mobile) {
+            flex-direction: column;
+            padding-top: 20px;
+            padding-bottom: 20px
+        }
+    }
+
+    // .footer__item
+    &__item {
+        display: flex;
+        column-gap: 20px;
+        align-items: center;
+        font-size: 2rem;
+        line-height: 2.5;
+    }
+
+    // .footer__copy
+    &__copy {}
+
+    // .footer__year
+    &__year {}
+
+    // .footer__text
+    &__text {}
+
+    // .footer__social
+    &__social {
+        display: flex;
+        align-items: center;
+        column-gap: 20px;
+    }
+
+    // .footer__icon
+    &__icon {}
+}
