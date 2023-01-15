@@ -1,0 +1,200 @@
+.contacts {
+
+    // .contacts__info
+    &__info {
+        display: flex;
+        flex-direction: column;
+        padding-top: 90px;
+        width: 450px;
+    }
+
+    // .contact__select
+    &__select {
+        width: 100%;
+        position: relative;
+        z-index: 100;
+        display: flex;
+        flex-direction: column;
+        gap: 47px;
+        transition: all 0.3s ease 0s;
+        padding-bottom: 47px;
+
+        .select__backdrop {
+            position: fixed;
+            display: none;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+            background-color: transparent;
+        }
+
+        &.open {
+            .select__input {
+                padding: 10px 35px 10px 35px;
+                background-color: #C1E698;
+
+                span {
+                    background-color: #8BA07E;
+                    transform: rotate(-180deg);
+                }
+            }
+
+            .select__backdrop {
+                display: block;
+            }
+
+
+
+            .select__dropdown {
+                display: block;
+            }
+        }
+
+        &.selected {
+            .select__input {
+                background-color: #C1E698;
+                box-shadow: none;
+            }
+
+            .info {
+                display: block;
+            }
+        }
+    }
+}
+
+
+.select {
+    &__info {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 17px 76px 32px 35px;
+        background-color: #EDF2EC;
+        border: 1px solid #000000;
+        border-radius: 20px;
+
+    }
+
+    // .select__input
+    &__input {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 35px 10px 20px;
+        font-size: 2rem;
+        color: $whiteGray;
+        letter-spacing: 1px;
+        background-color: #D6E7D2;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        height: 50px;
+        cursor: pointer;
+
+        span {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 16px;
+            height: 16px;
+            padding-top: 2px;
+            background-color: #AEA1A1;
+            border-radius: 100%;
+
+            &::before {
+                font-size: 0.7rem;
+                color: #ffffff;
+            }
+        }
+    }
+
+    // .select__dropdown
+    &__dropdown {
+        padding: 25px 35px;
+        display: none;
+        position: absolute;
+        width: 100%;
+        top: 50px;
+        left: 0;
+        right: 0;
+        background-color: #DCE9D9;
+        font-size: 1.6rem;
+        max-height: 200px;
+        overflow-y: auto;
+        color: $whiteGray;
+    }
+
+    // .select__list
+
+    &__list {}
+
+    // .select__item
+    &__item {
+        font-size: 1.6rem;
+        letter-spacing: 1px;
+        color: #499A18;
+        padding: 10px 0;
+        transition: color 0.3s ease 0s;
+        cursor: pointer;
+
+        &:hover {
+            color: $whiteGray;
+        }
+
+        &.active__item {
+            color: $whiteGray;
+        }
+    }
+}
+
+
+.info {
+    display: none;
+
+    &__body {
+        display: flex;
+        gap: 10px;
+        font-size: 1.6rem;
+        line-height: 2.5;
+    }
+
+    // .info__label
+    &__label {
+        color: $mainColor;
+    }
+
+    // .info__city
+    &__city {}
+
+    // .info__phone
+    &__phone {}
+
+    // .info__adress
+    &__adress {}
+
+    // .info__content
+    &__content {
+        color: $whiteGray;
+
+        a {
+            color: inherit;
+        }
+    }
+
+    &__button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 7px 29px;
+        font-family: Inika;
+        font-weight: 700;
+        line-height: 1.3;
+        color: $whiteGray;
+        border: 1px solid #E06733;
+        border-radius: 5px;
+        align-self: center;
+        background-color: transparent;
+    }
+}
