@@ -36,6 +36,8 @@ const getTemplate = (data = [], placeholder) => {
     `;
 };
 
+const getTemplateInfo = (data = []) => {};
+
 export class Select {
     constructor(selector, options) {
         this.el = document.querySelector(selector);
